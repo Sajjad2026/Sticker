@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:layoutDirection="ltr"
+    tools:context=".activites.GalleryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:paddingTop="10dp"
+            android:id="@+id/title_lyt"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/back_btn"
+                android:contentDescription="drawer"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:id="@+id/setting_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/back_btn"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/select_sticker"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_ad"
+            android:layout_below="@+id/title_lyt"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="3dp"
+                android:minHeight="@dimen/_80sdp"
+                android:id="@+id/native_container"/>
+
+            <RelativeLayout
+                android:id="@+id/bannerLayout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/_50sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/txt_banner"
+                    android:text="@string/loading"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/banner_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:minHeight="@dimen/_50sdp"
+                    android:layout_marginVertical="@dimen/_2sdp"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/options_lyt"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/relative_ad"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lyt_folder_select"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/bg_color"
+                    android:textAlignment="center"
+                    android:tag="up"
+                    android:id="@+id/folder_txt"
+                    android:drawableStart="@drawable/gallery_icon"
+                    android:drawablePadding="10dp"
+                    android:text="@string/camera_roll"
+                    app:drawableRightCompat="@drawable/ic_arroaw_up">
+                </TextView>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/take_photo_btn"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:drawablePadding="10dp"
+                    android:text="@string/take_photo"
+                    app:drawableLeftCompat="@drawable/ic_photo">
+                </TextView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/gallery_main_frameholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/options_lyt"
+            android:layout_above="@+id/bottom_ads_lyt"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_ads_lyt"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relative_ad2"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="3dp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:id="@+id/native_container2"/>
+
+                <RelativeLayout
+                    android:id="@+id/bannerLayout2"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/txt_banner2"
+                        android:text="@string/loading"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/banner_area2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:minHeight="@dimen/_50sdp"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

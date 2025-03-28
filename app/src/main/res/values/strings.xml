@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WA STICKERS BOX</string>
+    <string name="let_s_start">Continue</string>
+    <string name="make_your_own_stickers_in_minutes">Make your own stickers in minutes</string>
+    <string name="the_easiest_way_to_make_your_chats_more_fun">The easiest way to make your chats more fun.</string>
+    <string name="wa_stickers_box">wa stickers box</string>
+    <string name="splash_image">splash_image</string>
+    <string name="skip">Skip</string>
+    <string name="intro_title1">Sticker’s</string>
+    <string name="intro_description1">Add Stickers and Send to Friends</string>
+    <string name="intro_title2">Sticker Packs</string>
+    <string name="intro_description2">Billions of Trending and Funny Stickers</string>
+    <string name="intro_title3">Animated Stickers</string>
+    <string name="intro_description3">Convert Video to Animated Stickers</string>
+    <string name="intro_title4">Create Sticker</string>
+    <string name="intro_description4">Create Your Own Collections</string>
+    <string name="intro_title5">Organize</string>
+    <string name="intro_description5">Add stickers Pack to Your WA</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="home">Home</string>
+    <string name="my_sticker">My Sticker</string>
+    <string name="premium">Premium</string>
+    <string name="search_stickers">Search Stickers</string>
+    <string name="language">Select Language</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rating">Rating</string>
+    <string name="foryou">For You</string>
+    <string name="trending">Trending</string>
+    <string name="textsticker">Text Sticker</string>
+    <string name="gifsticker">Gif Sticker</string>
+    <string name="share_with_friends">Share With friends</string>
+    <string name="image">image</string>
+    <string name="title_activity_add_text">AddTextActivity</string>
+    <string name="previous">Previous</string>
+    <string name="drawer">drawer</string>
+    <string name="delete_btn">delete_btn</string>
+    <string name="pack">Pack</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="no_sticker_pack_available">No sticker pack added yet</string>
+    <string name="create_sticker_pack">Create Sticker Pack</string>
+    <string name="flip_h">Flip H</string>
+    <string name="business">Business</string>
+    <string name="category">Categories</string>
+    <string name="crop">Crop</string>
+    <string name="create_sticker">Create Sticker</string>
+    <string name="create_to_new_pack">Create To New Pack</string>
+    <string name="save_to_my_pack">Save To My Pack</string>
+    <string name="flip_v">Flip v</string>
+    <string name="see_all">See All</string>
+    <string name="sticker_identifier">Sticker Identifier</string>
+    <string name="shapes">Shapes</string>
+    <string name="magic">Magic</string>
+    <string name="eraser">Eraser</string>
+    <string name="repair">Repair</string>
+    <string name="langugae">Language</string>
+    <string name="lasso">Lasso</string>
+    <string name="setting">Setting</string>
+    <string name="select_0">Select 0</string>
+    <string name="share_app">Share App</string>
+    <string name="about">About</string>
+    <string name="faqs">FAQs</string>
+    <string name="create">Create</string>
+    <string name="cutout">Cutout</string>
+    <string name="export">Export</string>
+    <string name="text">Text</string>
+    <string name="sticker">Sticker</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="folder_name">Folder Name</string>
+    <string name="border">Border</string>
+    <string name="camera_roll">Camera Roll</string>
+    <string name="select_sticker">Select Sticker</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="russian">Russian</string>
+    <string name="german">German</string>
+    <string name="french">French</string>
+    <string name="korean">Korean</string>
+    <string name="select">Select</string>
+    <string name="arabic">Arabic</string>
+    <string name="animated">Animated</string>
+    <string name="input_a_name">Edit Pack Name</string>
+    <string name="sticker_pack_1">Sticker Pack 1</string>
+    <string name="italian">Italian</string>
+    <string name="regular">Regular</string>
+    <string name="permission_is_required_to_save_sticker_from_social_media_to_your_device_storage">Permission is required to save sticker from social media to your device storage.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="grant">Grant</string>
+    <string name="unlock_unlimited_access">Unlock Unlimited Access</string>
+    <string name="rs_150_00_month">Rs 150.00 / Month</string>
+    <string name="rs_2000_00_year">Rs 2000.00 / Year</string>
+    <string name="rs_1_900_00_lifetime">Rs 1,900.00 / LifeTime</string>
+    <string name="stroke">Stroke</string>
+    <string name="are_you_sure_you_want_to_delete_it">Are you sure you want to delete it?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="hello">Hello</string>
+    <string name="selected">Selected</string>
+    <string name="make_simple_chats_more_fun">Make simple chats more fun</string>
+    <string name="turn_everyday_boring_chats_more_fun_with_our_fun_stickers_packs">Turn everyday boring chats more fun with our fun stickers packs</string>
+    <string name="exit">Exit</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_text">Add Text</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ads_place_here">Ads Place Here</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="loading_advertisement">Loading advertising...</string>
+    <string name="contain_Ad">This action may contains ad.</string>
+    <string name="loading">Laoding...</string>
+    <string name="chose_language">Choose your App Language</string>
+    <string name="none">None</string>
+    <string name="comming_soon">Comming Soon...</string>
+    <string name="no_internet">Internet Connectivity Issue😔, Still Can Make Your Own Stickers😊</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="sticker_pack">Sticker Pack</string>
+    <string name="click_here">Click Here</string>
+    <string name="exit_app">Exit Application</string>
+    <string name="exit_desc">Enjoy Our App?</string>
+    <string name="exit_text">Please give us 5 stars</string>
+    <string name="exit_text_2">it motivates us to make better apps</string>
+    <string name="close">Close</string>
+    <string name="home_welcome">Welcome Back!</string>
+    <string name="home_welcome_detail">Turn everyday boring chats more fun with our fun stickers packs</string>
+
+    <string name="get">Get</string>
+    <string name="get_pro_2">Pro</string>
+    <string name="get_pro_3">Access</string>
+    <string name="fetching">Fetching</string>
+    <string name="continues_purchase">Continue</string>
+    <string name="no_commitment">No commitment cancel anytime.</string>
+    <string name="you_re_offline">You are offline!</string>
+    <string name="check_your_internet_connection_amp_try_again">Check your internet connection or get a notification when you’re back online.</string>
+    <string name="Retry">Retry</string>
+
+    <string name="Week_Offer">1 Week Offer</string>
+    <string name="month_Offer">1 Month Offer</string>
+    <string name="three_month_Offer">3 Month Offer</string>
+    <string name="LIFETIME_offer">LifeTime Offer</string>
+    <string name="sticker_rate" translatable="false">%.2f</string>
+
+    <!--    billing keys-->
+    <string name="oneWeek" translatable="false">oneweek</string>
+    <string name="oneMonth" translatable="false">onemonth</string>
+    <string name="threeMonth" translatable="false">threemonths</string>
+    <string name="lifeTime" translatable="false">lifetime</string>
+    <!--    billing discount keys-->
+    <string name="oneWeekCut" translatable="false">oneweekcut</string>
+    <string name="oneMonthCut" translatable="false">onemonthcut</string>
+    <string name="threeMonthCut" translatable="false">threemonthcut</string>
+    <string name="lifeTimeCut" translatable="false">lifetimecut</string>
+
+    <string name="please_try_again">Try Again</string>
+    <string name="auto">Auto</string>
+    <string name="suspend_app">Please update your app for latest features!</string>
+    <string name="premium_text">Get access to all features</string>
+    <string name="premiums">Go Premium</string>
+    <string name="hidden_videos">Hidden Videos</string>
+    <string name="on_your_internet">Enable internet connectivity!</string>
+    <string name="no_item">No item available</string>
+    <string name="whatsapp_not">Whatsapp Business is not installed.</string>
+    <string name="whatsapp_not_install">Whatsapp not installed.</string>
+    <string name="search">Search Stickers Here</string>
+    <string name="search_home">Search Here</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">STICKER MAKER</string>
+    <string name="pro">Pro</string>
+    <string name="add_pack">Add Pack</string>
+    <string name="edit_pack">Edit Pack</string>
+    <string name="save">Save</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="terms_condition"><![CDATA[Your subscription will renew automatically and you will be charged at start of each billing cycle. Terms & Conditions]]></string>
+    <string name="export_to">Export To</string>
+    <string name="change_langauge">Change Language</string>
+    <string name="adding">Adding</string>
+</resources>

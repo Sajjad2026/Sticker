@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<path>
+    <external-path name="my_images"
+        path="Android/data/com.nova.pack.sticker/files/Pictures" />
+
+    <external-files-path
+        name="stickers_asset"
+        path="/" />
+    <external-path
+        name="external_files"
+        path="." />
+</path>

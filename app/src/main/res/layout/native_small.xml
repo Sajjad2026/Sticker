@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/bg_native"
+        android:background="@drawable/round_corner"
+        android:layout_height="@dimen/_50sdp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ad_app_icon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ad_app_icon"
+                android:layout_centerVertical="true"
+                android:id="@+id/linear_2"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ad_notification_view"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/native_label_stroke"
+                        android:text="Ad"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/ad_headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:maxLength="20"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/ad_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="100"
+                    android:textColor="@color/black"
+                    android:text="fifth"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_8ssp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ad_call_to_action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="wee"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_toRightOf="@+id/linear_2"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_8ssp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>

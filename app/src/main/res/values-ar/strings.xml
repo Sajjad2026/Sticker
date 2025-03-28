@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">صندوق ملصقات WA</string>
+    <string name="let_s_start">لنبدأ</string>
+    <string name="make_your_own_stickers_in_minutes">اصنع ملصقاتك الخاصة في دقائق</string>
+    <string name="the_easiest_way_to_make_your_chats_more_fun">أسهل طريقة لجعل دردشاتك أكثر متعة.</string>
+    <string name="wa_stickers_box">مربع الملصقات</string>
+    <string name="splash_image">splash_image</string>
+    <string name="skip">تخطي</string>
+    <string name="intro_title1">اجعل الدردشات البسيطة أكثر متعة</string>
+    <string name="intro_description1">اجعل الدردشات اليومية المملة أكثر متعة من خلال حزم الملصقات الممتعة لدينا</string>
+    <string name="intro_title2">أرسل حبك بأسلوب أنيق</string>
+    <string name="intro_description2">استمتع بمحادثات مليئة بالحب من خلال مجموعتنا الضخمة من ملصقات الحب</string>
+    <string name="intro_title3">ملصقات GIF للاختيار من بينها</string>
+    <string name="intro_description3">مجموعة ضخمة من ملصقات GIF للاختيار من بينها</string>
+    <string name="intro_title4">إنشاء مجموعاتك الخاصة</string>
+    <string name="intro_description4">صمم مجموعات الملصقات الخاصة بك</string>
+    <string name="next">التالي</string>
+    <string name="start">ابدأ</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="my_sticker">الملصق الخاص بي</string>
+    <string name="premium">بريميوم</string>
+    <string name="search_stickers">البحث في الملصقات</string>
+    <string name="language">اللغة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="share">مشاركة</string>
+    <string name="about_us">نبذة عنا</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="rating">التقييم</string>
+    <string name="foryou">لك</string>
+    <string name="trending">الاتجاه</string>
+    <string name="textsticker">ملصق نصي</string>
+    <string name="gifsticker">ملصق GIF</string>
+    <string name="share_with_friends">المشاركة مع الأصدقاء</string>
+    <string name="image">صورة</string>
+    <string name="title_activity_add_text">AddTextActivity</string>
+    <string name="previous">السابق</string>
+    <string name="drawer">الدرج</string>
+    <string name="delete_btn">delete_btn</string>
+    <string name="pack">الحزمة</string>
+    <string name="whatsapp">واتساب</string>
+    <string name="no_sticker_pack_available">لا تتوفر حزمة ملصقات</string>
+    <string name="create_sticker_pack">إنشاء حزمة ملصقات</string>
+    <string name="flip_h">Flip H</string>
+    <string name="business">الأعمال التجارية</string>
+    <string name="category">الفئة</string>
+    <string name="crop">اقتصاص</string>
+    <string name="create_sticker">إنشاء ملصق</string>
+    <string name="create_to_new_pack">إنشاء لحزمة جديدة</string>
+    <string name="save_to_my_pack">حفظ في حزمتي</string>
+    <string name="flip_v">Flip v</string>
+    <string name="see_all">مشاهدة الكل</string>
+    <string name="sticker_identifier">معرف الملصق</string>
+    <string name="shapes">الأشكال</string>
+    <string name="magic">السحر</string>
+    <string name="eraser">الممحاة</string>
+    <string name="repair">إصلاح</string>
+    <string name="langugae">اللغات</string>
+    <string name="lasso">لاسو</string>
+    <string name="setting">الإعداد</string>
+    <string name="select_0">حدد 0</string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="about">حول</string>
+    <string name="faqs">الأسئلة الشائعة</string>
+    <string name="create">إنشاء</string>
+    <string name="cutout">المقطع</string>
+    <string name="export">تصدير</string>
+    <string name="text">النص</string>
+    <string name="sticker">الملصق</string>
+    <string name="take_photo">التقاط صورة</string>
+    <string name="folder_name">اسم المجلد</string>
+    <string name="border">الحدود</string>
+    <string name="camera_roll">فيلم الكاميرا</string>
+    <string name="select_sticker">حدد الملصق</string>
+    <string name="english">الإنجليزية</string>
+    <string name="spanish">الإسبانية</string>
+    <string name="russian">الروسية</string>
+    <string name="german">الألمانية</string>
+    <string name="french">الفرنسية</string>
+    <string name="korean">الكورية</string>
+    <string name="select">حدد</string>
+    <string name="arabic">العربية</string>
+    <string name="animated">متحرك</string>
+    <string name="input_a_name">أدخل اسمًا</string>
+    <string name="sticker_pack_1">حزمة الملصقات 1</string>
+    <string name="italian">الإيطالية</string>
+    <string name="regular">عادي</string>
+    <string name="permission_is_required_to_save_sticker_from_social_media_to_your_device_storage">يلزم الحصول على إذن لحفظ الملصق من الوسائط الاجتماعية إلى مساحة تخزين جهازك.</string>
+    <string name="grant_permission">منح الإذن</string>
+    <string name="grant">منحة</string>
+    <string name="unlock_unlimited_access">فتح الوصول غير المحدود</string>
+    <string name="rs_150_00_month">150.00 روبية هندية / الشهر</string>
+    <string name="rs_2000_00_year">2000.00 روبية هندية / السنة</string>
+    <string name="rs_1_900_00_lifetime">1,900.00 روبية هندية / مدى الحياة</string>
+    <string name="stroke">السكتة الدماغية</string>
+    <string name="are_you_sure_you_want_to_delete_it">هل أنت متأكد من رغبتك في حذفه؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="ok">موافق</string>
+    <string name="hello">مرحبًا</string>
+    <string name="selected">تم التحديد</string>
+    <string name="make_simple_chats_more_fun">اجعل الدردشات البسيطة أكثر متعة</string>
+    <string name="turn_everyday_boring_chats_more_fun_with_our_fun_stickers_packs">اجعل الدردشات اليومية المملة أكثر متعة مع حزم الملصقات الممتعة لدينا</string>
+    <string name="exit">خروج</string>
+    <string name="confirm">تأكيد</string>
+    <string name="add_text">إضافة نص</string>
+    <string name="hello_blank_fragment">مرحبًا بالجزء الفارغ</string>
+    <string name="ads_place_here">يتم وضع الإعلانات هنا</string>
+    <string name="please_wait">الرجاء الانتظار...</string>
+    <string name="loading_advertisement">جارٍ تحميل الإعلانات...</string>
+    <string name="contain_Ad">قد يحتوي هذا الإجراء على إعلان.</string>
+    <string name="loading">جارٍ التحميل...</string>
+    <string name="chose_language">اختر لغة التطبيق\n</string>
+    <string name="none">لا شيء</string>
+    <string name="comming_soon">قريبًا...</string>
+    <string name="no_internet">مشكلة في الاتصال بالإنترنت، لا يزال بإمكانك إنشاء ملصقاتك الخاصة😊</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="sticker_pack">حزمة الملصقات</string>
+    <string name="click_here">انقر هنا</string>
+    <string name="exit_app">الخروج من التطبيق</string>
+    <string name="exit_desc">هل تستمتع بتطبيقنا؟</string>
+    <string name="exit_text">من فضلك أعطنا 5 نجوم</string>
+    <string name="exit_text_2">يحفزنا على إنشاء تطبيقات أفضل</string>
+    <string name="close">إغلاق</string>
+    <string name="home_welcome">مرحبًا بعودتك!</string>
+    <string name="home_welcome_detail">اجعل الدردشات اليومية المملة أكثر متعة من خلال حزم الملصقات الممتعة لدينا</string>
+
+    <string name="get">احصل على</string>
+    <string name="get_pro_2">الاحترافي</string>
+    <string name="get_pro_3">الوصول</string>
+    <string name="fetching">جلب</string>
+    <string name="continues_purchase">متابعة</string>
+    <string name="no_commitment">لا يمكن إلغاء الالتزام في أي وقت.</string>
+    <string name="you_re_offline">أنت غير متصل بالإنترنت!</string>
+    <string name="check_your_internet_connection_amp_try_again">تحقق من اتصالك بالإنترنت أو احصل على إشعار عند معاودة الاتصال بالإنترنت.</string>
+    <string name="Retry">إعادة المحاولة</string>
+
+    <string name="Week_Offer">عرض لمدة أسبوع</string>
+    <string name="month_Offer">عرض لمدة شهر</string>
+    <string name="three_month_Offer">عرض لمدة 3 أشهر</string>
+    <string name="LIFETIME_offer">عرض مدى الحياة</string>
+
+    <string name="please_try_again">حاول مرة أخرى</string>
+    <string name="auto">تلقائي</string>
+    <string name="suspend_app">يُرجى تحديث تطبيقك للحصول على أحدث الميزات!</string>
+    <string name="premium_text">أطلق العنان للميزات المتقدمة مع Premium</string>
+    <string name="premiums">الذهاب إلى الإصدار المميز</string>
+    <string name="hidden_videos">مقاطع الفيديو المخفية</string>
+    <string name="on_your_internet">تمكين الاتصال بالإنترنت!</string>
+    <string name="no_item">لا يوجد عنصر متاح</string>
+    <string name="whatsapp_not">لم يتم تثبيت تطبيق WhatsApp Business.</string>
+    <string name="whatsapp_not_install">WhatsApp غير مثبت.</string>
+    <string name="search">ابحث عن الملصقات هنا</string>
+</resources>

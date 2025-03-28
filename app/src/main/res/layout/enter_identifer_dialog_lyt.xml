@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    android:layout_margin="@dimen/_5sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_16ssp"
+            android:includeFontPadding="false"
+            android:textColor="@color/bg_color"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/input_a_name">
+        </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/cross_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/cross"/>
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/edt_edit_bg"
+            android:paddingStart="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textColorHint="@color/black"
+            android:id="@+id/identifier_edit_text"
+            android:hint="@string/sticker_pack_1">
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:text="@string/cancel"
+                android:layout_margin="@dimen/_5sdp"
+                android:textSize="@dimen/_12ssp"
+                android:id="@+id/cancel_btn"
+                android:includeFontPadding="false"
+                android:backgroundTint="@color/gray"
+                android:layout_weight="1"
+                android:background="@drawable/delete_btn_bg"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/black"
+                >
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:text="@string/save"
+                android:textSize="@dimen/_12ssp"
+                android:id="@+id/ok_btn"
+                android:layout_marginEnd="30dp"
+                android:includeFontPadding="false"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bg_color"
+                android:background="@drawable/delete_btn_bg"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/white"
+                >
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

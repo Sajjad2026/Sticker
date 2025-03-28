@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WhatsappStickerMaker" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#29D38C</item>
+        <item name="colorPrimaryVariant">#29D38C</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorAccent">#29D38C</item>
+    </style>
+
+    <style name="RatingBarSmall" parent="android:Widget.DeviceDefault.Light.RatingBar.Indicator">
+        <item name="android:minHeight">36dp</item>
+        <item name="android:maxHeight">36dp</item>
+    </style>
+
+    <style name="Theme.WhatsappStickerMaker" parent="Base.Theme.WhatsappStickerMaker">
+        <item name="colorPrimary">#29D38C</item>
+        <item name="colorPrimaryVariant">#29D38C</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorAccent">#29D38C</item>
+
+
+    </style>
+
+    <style name="Theme.Fab_Bottom_app_bar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#F3F6F5</item>
+        <item name="colorPrimaryVariant">#0F9D58</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorOnPrimary">@color/grey</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="myAdTheme" parent="Theme.AppCompat.DayNight.NoActionBar" >
+        <item name="android:background">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:windowEnterAnimation">@null</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+       <item name="fontFamily">@font/rubik_bold</item>
+    </style>
+    <style name="BottomNavThem" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+</resources>

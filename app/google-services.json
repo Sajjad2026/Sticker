@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "743639477274",
+    "project_id": "new-sticker-box---shahzad",
+    "storage_bucket": "new-sticker-box---shahzad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743639477274:android:529f91e8cb0b37e4e835a3",
+        "android_client_info": {
+          "package_name": "com.nova.pack.sticker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyIYt9Fl-UOtlP3xwG4TjGW0ZA0hcjwR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743639477274:android:606820c65739ef08e835a3",
+        "android_client_info": {
+          "package_name": "com.nova.pack.stickers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyIYt9Fl-UOtlP3xwG4TjGW0ZA0hcjwR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      },
+      "admob_app_id": "ca-app-pub-5809026421762394~4124669188"
+    }
+  ],
+  "configuration_version": "1"
+}

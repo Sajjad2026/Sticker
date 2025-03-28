@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".activites.CropImageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:paddingTop="10dp"
+            android:id="@+id/title_lyt"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/back_btn"
+                android:contentDescription="drawer"
+                android:src="@drawable/ic_close"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/crop"
+                android:textColor="@color/black"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/_14ssp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/done_btn"
+                android:contentDescription="drawer"
+                android:src="@drawable/ic_done"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_ad"
+            android:layout_below="@+id/title_lyt"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="3dp"
+                android:minHeight="@dimen/_80sdp"
+                android:id="@+id/native_container"/>
+
+            <RelativeLayout
+                android:id="@+id/bannerLayout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/txt_banner"
+                    android:text="@string/loading"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/banner_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:minHeight="@dimen/_50sdp"
+                    android:layout_marginVertical="@dimen/_2sdp"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lyt_edit"
+            android:background="@drawable/edit_bg"
+            android:layout_below="@+id/relative_ad">
+
+            <com.canhub.cropper.CropImageView
+                android:id="@+id/cropImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cropBorderCornerColor="@color/bg_color"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyt_shapes"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_item_bg"
+            android:layout_above="@+id/bottom_ads_lyt">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                app:cardBackgroundColor="#F3F3F3"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="center"
+                app:cardElevation="0dp"
+                android:id="@+id/cardview"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center"
+                    android:layout_height="30dp"
+                    android:id="@+id/shape_imageview"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_line">
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_line2">
+            </ImageView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/shapesRecyclerView"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                tools:itemCount="1">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyt_edit"
+            android:weightSum="3"
+            android:visibility="visible"
+            android:background="@drawable/edit_item_bg"
+            android:layout_above="@+id/bottom_ads_lyt">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:id="@+id/btn_flipH"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/fliph"
+                    />
+                <TextView
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/flip_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:id="@+id/btn_flipV"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/flipv"
+                    />
+                <TextView
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/flip_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:id="@+id/btn_shapes"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:focusable="true">
+                <ImageView
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/ic_shapes"
+                    />
+                <TextView
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/shapes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_ads_lyt"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relative_ad2"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="3dp"
+                    android:minHeight="@dimen/_80sdp"
+                    android:id="@+id/native_container2"/>
+
+                <RelativeLayout
+                    android:id="@+id/bannerLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/txt_banner2"
+                        android:text="@string/loading"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/banner_area2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:minHeight="@dimen/_50sdp"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

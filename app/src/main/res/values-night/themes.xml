@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WhatsappStickerMaker" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#29D38C</item>
+        <item name="colorPrimaryVariant">#29D38C</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorAccent">#29D38C</item>
+    </style>
+
+    <style name="Theme.WhatsappStickerMaker" parent="Base.Theme.WhatsappStickerMaker">
+        <item name="colorPrimary">#29D38C</item>
+        <item name="colorPrimaryVariant">#29D38C</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorAccent">#29D38C</item>
+
+
+    </style>
+
+    <style name="Theme.Fab_Bottom_app_bar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#F3F6F5</item>
+        <item name="colorPrimaryVariant">#0F9D58</item>
+        <item name="colorPrimaryDark">#29D38C</item>
+        <item name="colorOnPrimary">#000</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/rubik_bold</item>
+    </style>
+</resources>

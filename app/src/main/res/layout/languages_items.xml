@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    android:id="@+id/card_languages"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/labguage_bg"
+    android:layout_height="@dimen/_45sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_width="@dimen/_33sdp"
+            android:id="@+id/img_flag"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_magic"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_flag"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="English"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/txt_languages"
+            android:fontFamily="@font/rubik_regular"
+            android:textColor="?android:textColorPrimary"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:adjustViewBounds="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/unselect_icon"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:id="@+id/radio_language" />
+
+</RelativeLayout>

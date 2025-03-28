@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activites.LanguageSelectActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_ad"
+        android:layout_below="@+id/relative_main"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:minHeight="@dimen/_80sdp"
+            android:layout_margin="3dp"
+            android:id="@+id/native_container"/>
+
+        <RelativeLayout
+            android:id="@+id/bannerLayout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/txt_banner"
+                android:text="@string/loading"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/banner_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:minHeight="@dimen/_50sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/relative_main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/language"
+            android:textSize="@dimen/_16sdp"
+            android:lines="1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/language"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/black" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="@dimen/_50sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:shimmer_auto_start="true"
+            android:id="@+id/relative_tick"
+            app:shimmer_base_alpha="0.7"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="@dimen/_23sdp">
+
+            <ImageView
+                android:id="@+id/btn_next"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tick_languages"
+                android:layout_gravity="center"
+                app:tint="@color/light_grey" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_above="@+id/relative_ad2"
+        android:layout_below="@+id/relative_ad"
+        android:layout_marginEnd="@dimen/_5sdp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relative_ad2"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="3dp"
+            android:minHeight="@dimen/_80sdp"
+            android:id="@+id/native_container2"/>
+
+        <RelativeLayout
+            android:id="@+id/bannerLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/txt_banner2"
+                android:text="@string/loading"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/banner_area2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:minHeight="@dimen/_50sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

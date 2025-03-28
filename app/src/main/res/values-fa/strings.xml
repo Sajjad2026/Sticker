@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">جعبه استیکر WA</string>
+    <string name="let_s_start">بیایید شروع کنیم</string>
+    <string name="make_your_own_stickers_in_minutes">استیکرهای خود را در چند دقیقه بسازید</string>
+    <string name="the_easiest_way_to_make_your_chats_more_fun">ساده ترین راه برای سرگرم کننده تر کردن چت های شما.</string>
+    <string name="wa_stickers_box">جعبه برچسب‌های wa</string>
+    <string name="splash_image">splash_image</string>
+    <string name="skip">پرش</string>
+    <string name="intro_title1">چت های ساده را سرگرم کننده تر کنید</string>
+    <string name="intro_description1">چت های خسته کننده روزمره را با بسته های برچسب های سرگرم کننده ما سرگرم کننده تر کنید</string>
+    <string name="intro_title2">عشق خود را به سبک ارسال کنید</string>
+    <string name="intro_description2">با استیکرهای عاشقانه مجموعه عظیم ما چت هایی پر از عشق داشته باشید</string>
+    <string name="intro_title3">برچسب‌های GIF برای انتخاب</string>
+    <string name="intro_description3">مجموعه عظیمی از برچسب‌های GIF برای انتخاب</string>
+    <string name="intro_title4">مجموعه های خود را ایجاد کنید</string>
+    <string name="intro_description4">مجموعه‌های برچسب خود را طراحی کنید</string>
+    <string name="next">بعدی</string>
+    <string name="start">شروع</string>
+    <string name="home">صفحه اصلی</string>
+    <string name="my_sticker">برچسب من</string>
+    <string name="premium">حق بیمه</string>
+    <string name="search_stickers">جستجوی برچسب ها</string>
+    <string name="language">زبان</string>
+    <string name="settings">تنظیمات</string>
+    <string name="share">اشتراک گذاری</string>
+    <string name="about_us">درباره ما</string>
+    <string name="privacy_policy">خط مشی رازداری</string>
+    <string name="rating">رتبه بندی</string>
+    <string name="foryou">برای شما</string>
+    <string name="trending">پرطرفدار</string>
+    <string name="textsticker">برچسب متن</string>
+    <string name="gifsticker">برچسب گیف</string>
+    <string name="share_with_friends">اشتراک گذاری با دوستان</string>
+    <string name="image">تصویر</string>
+    <string name="title_activity_add_text">AddTextActivity</string>
+    <string name="previous">قبلی</string>
+    <string name="drawer">کشو</string>
+    <string name="delete_btn">delete_btn</string>
+    <string name="pack">بسته</string>
+    <string name="whatsapp">واتساپ</string>
+    <string name="no_sticker_pack_available">بسته برچسب موجود نیست</string>
+    <string name="create_sticker_pack">پک استیکر ایجاد کنید</string>
+    <string name="flip_h">تغییر H</string>
+    <string name="business">کسب و کار</string>
+    <string name="category">دسته</string>
+    <string name="crop">برش</string>
+    <string name="create_sticker">ایجاد برچسب</string>
+    <string name="create_to_new_pack">ایجاد در بسته جدید</string>
+    <string name="save_to_my_pack">ذخیره در بسته من</string>
+    <string name="flip_v">تغییر v</string>
+    <string name="see_all">مشاهده همه</string>
+    <string name="sticker_identifier">شناسه برچسب</string>
+    <string name="shapes">اشکال</string>
+    <string name="magic">جادو</string>
+    <string name="eraser">پاک کن</string>
+    <string name="repair">تعمیر</string>
+    <string name="langugae">Langugae</string>
+    <string name="lasso">کند</string>
+    <string name="setting">تنظیم</string>
+    <string name="select_0">0 را انتخاب کنید</string>
+    <string name="share_app">اشتراک گذاری برنامه</string>
+    <string name="about">درباره</string>
+    <string name="faqs">سؤالات متداول</string>
+    <string name="create">ایجاد</string>
+    <string name="cutout">برش</string>
+    <string name="export">صادر کردن</string>
+    <string name="text">متن</string>
+    <string name="sticker">برچسب</string>
+    <string name="take_photo">عکس بگیرید</string>
+    <string name="folder_name">نام پوشه</string>
+    <string name="border">حاشیه</string>
+    <string name="camera_roll">رول دوربین</string>
+    <string name="select_sticker">برچسب را انتخاب کنید</string>
+    <string name="english">انگلیسی</string>
+    <string name="spanish">اسپانیایی</string>
+    <string name="russian">روسی</string>
+    <string name="german">آلمانی</string>
+    <string name="french">فرانسوی</string>
+    <string name="korean">کره ای</string>
+    <string name="select">انتخاب</string>
+    <string name="arabic">عربی</string>
+    <string name="animated">متحرک</string>
+    <string name="input_a_name">یک نام وارد کنید</string>
+    <string name="sticker_pack_1">بسته استیکر 1</string>
+    <string name="italian">ایتالیایی</string>
+    <string name="regular">معمول</string>
+    <string name="permission_is_required_to_save_sticker_from_social_media_to_your_device_storage">برای ذخیره برچسب از رسانه‌های اجتماعی در فضای ذخیره‌سازی دستگاه شما، مجوز لازم است.</string>
+    <string name="grant_permission">اجازه دادن</string>
+    <string name="grant">اعطا</string>
+    <string name="unlock_unlimited_access">باز کردن قفل دسترسی نامحدود</string>
+    <string name="rs_150_00_month">150.00 روپیه / ماه</string>
+    <string name="rs_2000_00_year">2000.00 روپیه / سال</string>
+    <string name="rs_1_900_00_lifetime">1900.00 روپیه / LifeTime</string>
+    <string name="stroke">سکته مغزی</string>
+    <string name="are_you_sure_you_want_to_delete_it">آیا مطمئن هستید که می خواهید آن را حذف کنید؟</string>
+    <string name="cancel">لغو</string>
+    <string name="delete">حذف</string>
+    <string name="ok">تأیید</string>
+    <string name="hello">سلام</string>
+    <string name="selected">انتخاب شده</string>
+    <string name="make_simple_chats_more_fun">چت های ساده را سرگرم کننده تر کنید</string>
+    <string name="turn_everyday_boring_chats_more_fun_with_our_fun_stickers_packs">چت های خسته کننده روزمره را با بسته های برچسب های سرگرم کننده ما سرگرم کننده تر کنید</string>
+    <string name="exit">خروج</string>
+    <string name="confirm">تأیید</string>
+    <string name="add_text">افزودن متن</string>
+    <string name="hello_blank_fragment">قطعه خالی سلام</string>
+    <string name="ads_place_here">تبلیغات اینجا قرار می گیرد</string>
+    <string name="please_wait">لطفاً صبر کنید...</string>
+    <string name="loading_advertisement">در حال بارگیری تبلیغات...</string>
+    <string name="contain_Ad">این عمل ممکن است حاوی آگهی باشد.</string>
+    <string name="loading">در حال بارگیری...</string>
+    <string name="chose_language">زبان برنامه خود را انتخاب کنید\n</string>
+    <string name="none">هیچکدام</string>
+    <string name="comming_soon">به زودی...</string>
+    <string name="no_internet">مشکل اتصال به اینترنت😔، هنوز هم می توانید استیکرهای خود را بسازید😊</string>
+    <string name="rate_us">به ما امتیاز دهید</string>
+    <string name="sticker_pack">بسته استیکر</string>
+    <string name="click_here">اینجا را کلیک کنید</string>
+    <string name="exit_app">خروج از برنامه</string>
+    <string name="exit_desc">از برنامه ما لذت می برید؟</string>
+    <string name="exit_text">لطفاً 5 ستاره به ما بدهید</string>
+    <string name="exit_text_2">این به ما انگیزه می‌دهد تا برنامه‌های بهتری بسازیم</string>
+    <string name="close">بستن</string>
+    <string name="home_welcome">خوش آمدید!</string>
+    <string name="home_welcome_detail">چت های خسته کننده روزمره را با بسته های برچسب های سرگرم کننده ما سرگرم کننده تر کنید</string>
+
+    <string name="get">دریافت</string>
+    <string name="get_pro_2">حرفه ای</string>
+    <string name="get_pro_3">دسترسی به</string>
+    <string name="fetching">در حال واکشی</string>
+    <string name="continues_purchase">ادامه</string>
+    <string name="no_commitment">هیچ وقت هیچ تعهدی لغو نمی شود.</string>
+    <string name="you_re_offline">شما آفلاین هستید!</string>
+    <string name="check_your_internet_connection_amp_try_again">اتصال اینترنت خود را بررسی کنید یا وقتی دوباره آنلاین شدید، اعلانی دریافت کنید.</string>
+    <string name="Retry">تلاش مجدد</string>
+
+    <string name="Week_Offer">پیشنهاد 1 هفته ای</string>
+    <string name="month_Offer">پیشنهاد یک ماهه</string>
+    <string name="three_month_Offer">پیشنهاد 3 ماهه</string>
+    <string name="LIFETIME_offer">پیشنهاد مادام العمر</string>
+
+    <string name="please_try_again">دوباره امتحان کنید</string>
+    <string name="auto">خودکار</string>
+    <string name="suspend_app">لطفاً برنامه خود را برای آخرین ویژگی ها به روز کنید!</string>
+    <string name="premium_text">ویژگی های پیشرفته را با Premium آزاد کنید</string>
+    <string name="premiums">به Premium بروید</string>
+    <string name="hidden_videos">ویدیوهای پنهان</string>
+    <string name="on_your_internet">اتصال اینترنت را فعال کنید!</string>
+    <string name="no_item">هیچ موردی موجود نیست</string>
+    <string name="whatsapp_not">Whatsapp Business نصب نشده است.</string>
+    <string name="whatsapp_not_install">Whatsapp نصب نشده است.</string>
+    <string name="search">برچسب‌ها را در اینجا جستجو کنید</string>
+</resources>

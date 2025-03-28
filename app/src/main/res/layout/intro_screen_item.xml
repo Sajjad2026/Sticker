@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_intro"
+        android:textAlignment="center"
+        android:textSize="@dimen/_17ssp"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/bg_color"
+        android:text="@string/make_simple_chats_more_fun">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description_intro"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginHorizontal="5dp"
+        android:fontFamily="@font/rubik_regular"
+        android:textColor="#000"
+        android:text="@string/turn_everyday_boring_chats_more_fun_with_our_fun_stickers_packs">
+    </TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:id="@+id/image_intro"
+        android:src="@drawable/intro_icon1">
+    </ImageView>
+
+
+</LinearLayout>
