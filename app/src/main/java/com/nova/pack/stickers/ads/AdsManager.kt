@@ -32,6 +32,7 @@ object AdsManager{
     var INTERSTITIAL_ID: String? = ""
     var AppOpen_ID: String? = ""
     var NATIVE_ID: String? = ""
+    var NATIVE_VIDEO_ID: String? = ""
 
  //   var OPENAPP_INTERSTITIAL_ID: String? = ""
   //  var BANNER_ID_SPLASH: String? = ""
@@ -77,7 +78,7 @@ object AdsManager{
     var AllAdsToast=false
     var Is_InApp_Screen_Show_Or_Not=false
     var ShowAppopenInterstitialOrNot=false
-    var BannerAndNativeTopSplashActivity=8
+    var BannerAndNativeTopSplashActivity=0
     var BannerAndNativeBottomSplashActivity=0
     var BannerBottomLanguagesActivity=0
     var BannerTopMainActivity=0
@@ -162,6 +163,10 @@ object AdsManager{
     var Is_Show_Non_Functional_Items= true
     var Load_Ad_If_All_Ads_Turn_Off= false
 
+    var Email_Address="absolu.inc@gmail.com"
+    var Terms_And_Conditions="absolu.inc@gmail.comhttps://absoluinc.blogspot.com/2024/12/terms-of-services-for-subscriptions.html"
+    var Privacy_Policy="https://absoluinc.blogspot.com/2019/10/privacy-policy.html"
+
     var ShowAppopenAfterEmailRating= false
     var ShowAppopenAfterPlaystoreRating= false
     var ShowAppopenAfterPrivacyPolicy= false
@@ -213,6 +218,7 @@ object AdsManager{
                         INTERSTITIAL_ID = json_ids.getString("INTERSTITIAL_ID").toString()
                         AppOpen_ID = json_ids.getString("OPEN_APP_ID").toString()
                         NATIVE_ID = json_ids.getString("NATIVE_ID").toString()
+                        NATIVE_VIDEO_ID = json_ids.getString("NATIVE_VIDEO_ID").toString()
                         //applovin
                         INTERESTIAL_ID_APPLOVIN = json_ids.getString("INTERESTIAL_ID_APPLOVIN").toString()
                         BANNER_APPLOVIN_ID = json_ids.getString("BANNER_APPLOVIN_ID").toString()
@@ -266,14 +272,17 @@ object AdsManager{
                         ShowAppopenAfterPrivacyPolicy=otherJson.getBoolean("ShowAppopenAfterPrivacyPolicy")
                         ShowAppopenAfterShareApp=otherJson.getBoolean("ShowAppopenAfterShareApp")
                         Enable_Applovin_Interstitial_After_FrequencyCapReached=otherJson.getBoolean("Enable_Applovin_Interstitial_After_FrequencyCapReached")
-                     //   Is_Show_Non_Functional_Items=otherJson.getBoolean("Is_Show_Non_Functional_Items")
+                        Is_Show_Non_Functional_Items=otherJson.getBoolean("Is_Show_Non_Functional_Items")
                         Load_Ad_If_All_Ads_Turn_Off=otherJson.getBoolean("Load_Ad_If_All_Ads_Turn_Off")
+                        Email_Address=otherJson.getString("Email_Address")
+                        Terms_And_Conditions=otherJson.getString("Terms_And_Conditions")
+                        Privacy_Policy=otherJson.getString("Privacy_Policy")
                     }
 
                     var BANNER_ADS=mFirebaseRemoteConfig.getString("BANNER_ADS_FLAGS")
                     if (BANNER_ADS.isNotEmpty()){
                         var json_values=JSONObject(BANNER_ADS)
-//                        BannerAndNativeTopSplashActivity=json_values.getInt("BannerAndNativeTopSplashActivity")
+                        BannerAndNativeTopSplashActivity=json_values.getInt("BannerAndNativeTopSplashActivity")
                         BannerBottomLanguagesActivity=json_values.getInt("BannerBottomLanguagesActivity")
                         BannerTopLanguagesActivity=json_values.getInt("BannerTopLanguagesActivity")
                         BannerTopDeleteStickerActivity=json_values.getInt("BannerTopDeleteStickerActivity")

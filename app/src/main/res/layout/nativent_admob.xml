@@ -1,16 +1,17 @@
-<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/bg_native"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/round_corner"
-        android:orientation="vertical"
         android:paddingHorizontal="@dimen/_2sdp"
-        android:paddingVertical="@dimen/_2sdp">
+        android:paddingVertical="@dimen/_2sdp"
+        android:id="@+id/bg_native"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ad_call_to_action"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_45sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_1sdp"
                 android:layout_marginVertical="@dimen/_1sdp"
                 android:background="@drawable/gradient_btn"
@@ -40,9 +41,9 @@
                     android:id="@+id/ad_app_icon"
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="@dimen/_1sdp"
                     android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_gravity="center"
                     android:adjustViewBounds="true" />
 
                 <LinearLayout
@@ -55,8 +56,8 @@
                         android:id="@+id/ad_headline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"
                         android:text="@string/app_name"
+                        android:maxLines="1"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_10sdp" />
 
@@ -70,8 +71,8 @@
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:background="@drawable/native_label_stroke"
                             android:gravity="center"
+                            android:background="@drawable/native_label_stroke"
                             android:text="Ad"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_8sdp"
@@ -80,15 +81,14 @@
                         <TextView
                             android:id="@+id/ad_body"
                             android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/_1sdp"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="@dimen/_1sdp"
-                            android:layout_marginStart="@dimen/_1sdp"
                             android:layout_marginTop="@dimen/_1sdp"
-                            android:layout_marginEnd="@dimen/_1sdp"
-                            android:lines="1"
-                            android:maxLength="100"
-                            android:text="fifth"
                             android:textColor="@color/black"
+                            android:maxLength="100"
+                            android:lines="1"
+                            android:text="fifth"
                             android:textSize="@dimen/_8sdp" />
 
                     </LinearLayout>

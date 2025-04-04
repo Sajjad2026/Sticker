@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business가 설치되지 않았습니다.</string>
     <string name="whatsapp_not_install">Whatsapp이 설치되지 않았습니다.</string>
     <string name="search">여기에서 스티커 검색</string>
+    <string name="search_home">검색하세요</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">스티커 제작</string>
+    <string name="pro">프로</string>
+    <string name="add_pack">팩 추가</string>
+    <string name="edit_pack">팩 편집</string>
+    <string name="save">저장</string>
+    <string name="get_premium">프리미엄 받기</string>
+    <string name="terms_condition"><![CDATA[구독은 자동 갱신되며 각 청구 시작 시 청구됩니다. 약관]]></string>
+    <string name="export_to">내보내기</string>
+    <string name="change_langauge">언어 변경</string>
+    <string name="adding">추가 중</string>
+
 </resources>

@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business がインストールされていません。</string>
     <string name="whatsapp_not_install">Whatsapp がインストールされていません。</string>
     <string name="search">ここでステッカーを検索</string>
+    <string name="search_home">ここで検索</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">ステッカー作成</string>
+    <string name="pro">プロ</string>
+    <string name="add_pack">パック追加</string>
+    <string name="edit_pack">パック編集</string>
+    <string name="save">保存</string>
+    <string name="get_premium">プレミアム取得</string>
+    <string name="terms_condition"><![CDATA[購読は自動更新され、請求が開始されます。 利用規約]]></string>
+    <string name="export_to">へエクスポート</string>
+    <string name="change_langauge">言語を変更</string>
+    <string name="adding">追加中</string>
+
 </resources>

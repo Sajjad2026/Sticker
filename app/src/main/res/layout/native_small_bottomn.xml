@@ -62,55 +62,19 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/ad_advertiser"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/_2sdp"
-                        android:layout_marginRight="@dimen/_2sdp"
-                        android:gravity="top"
-                        android:textSize="@dimen/_8ssp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/ad_price"
+                        android:id="@+id/ad_body"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_2sdp"
-                        android:textSize="@dimen/_8ssp" />
-
-                    <RatingBar
-                        android:id="@+id/ad_stars"
-                        style="?android:attr/ratingBarStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_2sdp"
-                        android:isIndicator="true"
-                        android:numStars="5"
-                        android:progressTint="#808080"
-                        android:stepSize="0.5" />
-
-                    <TextView
-                        android:id="@+id/ad_store"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:maxLength="100"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:text="fifth"
+                        android:layout_marginEnd="@dimen/_1sdp"
+                        android:lines="1"
                         android:textSize="@dimen/_8ssp" />
 
                 </LinearLayout>
-                <TextView
-                    android:id="@+id/ad_body"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLength="100"
-                    android:layout_marginStart="@dimen/_1sdp"
-                    android:textColor="@color/white"
-                    android:text="fifth"
-                    android:layout_marginEnd="@dimen/_1sdp"
-                    android:lines="1"
-                    android:textSize="@dimen/_8ssp" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -118,7 +82,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ad_call_to_action"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="@dimen/_45sdp"
             android:background="@drawable/gradient_btn"
             android:gravity="center"
             android:layout_marginHorizontal="@dimen/_1sdp"

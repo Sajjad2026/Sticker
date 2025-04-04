@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business non è installato.</string>
     <string name="whatsapp_not_install">Whatsapp non installato.</string>
     <string name="search">Cerca adesivi qui</string>
+    <string name="search_home">Cerca qui</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">Crea Sticker</string>
+    <string name="pro">Pro</string>
+    <string name="add_pack">Aggiungi pacco</string>
+    <string name="edit_pack">Modifica pacco</string>
+    <string name="save">Salva</string>
+    <string name="get_premium">Ottieni Premium</string>
+    <string name="terms_condition"><![CDATA[L\'abbonamento si rinnova e verrà addebitato all\'inizio. Termini]]></string>
+    <string name="export_to">Esporta in</string>
+    <string name="change_langauge">Cambia lingua</string>
+    <string name="adding">Aggiunta</string>
+
 </resources>

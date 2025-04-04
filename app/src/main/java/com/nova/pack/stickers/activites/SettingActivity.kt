@@ -66,7 +66,7 @@ class SettingActivity : AppCompatActivity() {
         }
         binding.btnPrivacy.setOnClickListener {
             isPrivacyPolicy=true
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://absoluinc.blogspot.com/2019/10/privacy-policy.html")))
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(AdsManager.Privacy_Policy)))
         }
         binding.btnShare.setOnClickListener {
             isShareApp=true

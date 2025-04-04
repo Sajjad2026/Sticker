@@ -401,7 +401,7 @@ class StickerDetailActivity : AppCompatActivity() {
                     var shareMessage = "\nLet me recommend you this application\n\n"
                     shareMessage =
                         """
-                    ${shareMessage + "https://play.google.com/store/apps/details?id=" + APPLICATION_ID}
+                    ${shareMessage + "https://play.google.com/store/apps/details?id=" + packageName}
                  
                     """.trimIndent()
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)

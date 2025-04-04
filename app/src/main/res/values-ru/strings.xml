@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business не установлен.</string>
     <string name="whatsapp_not_install">Whatsapp не установлен.</string>
     <string name="search">Найти здесь стикеры</string>
+    <string name="search_home">Поиск</string>
+    <string name="whats">ВА</string>
+    <string name="sticker_maker">Создать стикеры</string>
+    <string name="pro">Про</string>
+    <string name="add_pack">Добавить пак</string>
+    <string name="edit_pack">Редакт. пак</string>
+    <string name="save">Сохранить</string>
+    <string name="get_premium">Купить премиум</string>
+    <string name="terms_condition"><![CDATA[Подписка продлевается авто и списывается в начале цикла. Условия]]></string>
+    <string name="export_to">Экспорт в</string>
+    <string name="change_langauge">Изменить язык</string>
+    <string name="adding">Добавление</string>
+
 </resources>

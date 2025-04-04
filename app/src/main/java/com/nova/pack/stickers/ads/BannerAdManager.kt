@@ -46,7 +46,13 @@ import com.nova.pack.stickers.utils.SharedPreferenceHelper.Companion.saveSession
 
 object BannerAdManager {
 
-    fun loadBannerAd(context: AppCompatActivity, layout: RelativeLayout, banner1: LinearLayout, native: FrameLayout, parameter: Int) {
+    fun loadBannerAd(
+        context: AppCompatActivity,
+        layout: RelativeLayout,
+        banner1: LinearLayout,
+        native: FrameLayout,
+        parameter: Int
+    ) {
         if (checkIfPlay) {
             if (!InAppClass.isPurchase) {
                 var sessionLimit = getSessionNumber("sessionNum", 0)
@@ -61,7 +67,7 @@ object BannerAdManager {
                     layout.visibility = View.VISIBLE
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         var adView = AdView(context)
                         adView.adUnitId = BANNER_ID!!
@@ -78,7 +84,11 @@ object BannerAdManager {
 
                         adView.adListener = object : AdListener() {
                             override fun onAdLoaded() {
-                                sendFirebaseAnalyticsKey(AppOpenAdManager.currentActivity!!, "admob_ad", "banner show")
+                                sendFirebaseAnalyticsKey(
+                                    AppOpenAdManager.currentActivity!!,
+                                    "admob_ad",
+                                    "banner show"
+                                )
                                 isSplashBannerLoad = true
                             }
 
@@ -90,7 +100,11 @@ object BannerAdManager {
                             override fun onAdClicked() {
                                 super.onAdClicked()
                                 clickCounter++
-                                if (clickCounter >= ClickCountLimit && !getSession("mySession", false)) {
+                                if (clickCounter >= ClickCountLimit && !getSession(
+                                        "mySession",
+                                        false
+                                    )
+                                ) {
                                     saveSession("mySession", true)
                                 }
                             }
@@ -100,15 +114,15 @@ object BannerAdManager {
                     }
                 } else if (parameter == 2) {
                     layout.visibility = View.VISIBLE
-                    loadBannerApplovin(context, banner1,layout)
-                }else if (parameter == 3) {
+                    loadBannerApplovin(context, banner1, layout)
+                } else if (parameter == 3) {
                     if (ShowBannerStroke) {
                         layout.setBackgroundResource(R.drawable.native_stroke)
                     }
                     layout.visibility = View.VISIBLE
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         if (banner1.toString().lowercase().contains("banner_area2")) {
                             loadCollapsibleBanner(context, banner1, "bottom")
@@ -120,96 +134,269 @@ object BannerAdManager {
                     native.visibility = View.VISIBLE
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         native.minimumHeight = getHeightForNativeNoMedia(context)
                         if (context.localClassName.lowercase().contains("language")) {
-                            nativeWithoutMedia(context, native, context.window, "lang", "top", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "top",
+                                banner1
+                            )
                         } else if (context.localClassName.lowercase().contains("intro")) {
-                            nativeWithoutMedia(context, native, context.window, "intro", "top", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "top",
+                                banner1
+                            )
                         } else {
-                            nativeWithoutMedia(context, native, context.window, "other", "top", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "top",
+                                banner1
+                            )
                         }
                     }
                 } else if (parameter == 5) {
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         native.minimumHeight = getHeightForNativeNoMedia(context)
                         native.visibility = View.VISIBLE
                         if (context.localClassName.lowercase().contains("language")) {
-                            nativeWithoutMedia(context, native, context.window, "lang", "bottom", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "bottom",
+                                banner1
+                            )
                         } else if (context.localClassName.lowercase().contains("intro")) {
-                            nativeWithoutMedia(context, native, context.window, "intro", "bottom", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "bottom",
+                                banner1
+                            )
                         } else {
-                            nativeWithoutMedia(context, native, context.window, "other", "bottom", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "bottom",
+                                banner1
+                            )
                         }
                     }
-                }else if (parameter == 9) {
+                } else if (parameter == 9) {
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         native.minimumHeight = getHeightForNativeNoMedia(context)
                         native.visibility = View.VISIBLE
                         if (context.localClassName.lowercase().contains("language")) {
-                            nativeWithoutMedia(context, native, context.window, "lang", "random", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "random",
+                                banner1
+                            )
                         } else if (context.localClassName.lowercase().contains("intro")) {
-                            nativeWithoutMedia(context, native, context.window, "intro", "random", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "random",
+                                banner1
+                            )
                         } else {
-                            nativeWithoutMedia(context, native, context.window, "other", "random", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "random",
+                                banner1
+                            )
                         }
                     }
-                }else if (parameter == 6) {
+                } else if (parameter == 6) {
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         native.minimumHeight = getHeightForSmallNative(context)
                         native.visibility = View.VISIBLE
                         if (context.localClassName.lowercase().contains("language")) {
-                            nativeWithoutMedia(context, native, context.window, "lang", "small", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "small",
+                                banner1
+                            )
                         } else if (context.localClassName.lowercase().contains("intro")) {
-                            nativeWithoutMedia(context, native, context.window, "intro", "small", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "small",
+                                banner1
+                            )
                         } else {
-                            nativeWithoutMedia(context, native, context.window, "other", "small", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "small",
+                                banner1
+                            )
                         }
                     }
                 } else if (parameter == 7) {
                     if (sessionLimit <= SessionCountLimit && session) {
                         layout.visibility = View.VISIBLE
-                        loadBannerApplovin(context, banner1,layout)
+                        loadBannerApplovin(context, banner1, layout)
                     } else {
                         native.minimumHeight = getHeightForSmallNative(context)
                         native.visibility = View.VISIBLE
                         if (context.localClassName.lowercase().contains("language")) {
-                            nativeWithoutMedia(context, native, context.window, "lang", "small2", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "small2",
+                                banner1
+                            )
                         } else if (context.localClassName.lowercase().contains("intro")) {
-                            nativeWithoutMedia(context, native, context.window, "intro", "small2", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "small2",
+                                banner1
+                            )
                         } else {
-                            nativeWithoutMedia(context, native, context.window, "other", "small2", banner1)
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "small2",
+                                banner1
+                            )
                         }
                     }
                 } else if (parameter == 8) {
                     if (context.localClassName.lowercase().contains("language")) {
-                        native.minimumHeight = context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._160sdp)
+                        native.minimumHeight =
+                            context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._160sdp)
                     }
                     native.visibility = View.VISIBLE
                     if (sessionLimit <= SessionCountLimit && session) {
                     } else {
                         nativeAdmob(context, native, context.window, 1)
                     }
+                } else if (parameter == 10) {
+                    native.visibility = View.VISIBLE
+                    if (sessionLimit <= SessionCountLimit && session) {
+                        layout.visibility = View.VISIBLE
+                        loadBannerApplovin(context, banner1, layout)
+                    } else {
+                        native.minimumHeight = getHeightForNativeNoMedia(context)
+                        if (context.localClassName.lowercase().contains("language")) {
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "lang",
+                                "bottomN",
+                                banner1
+                            )
+                        } else if (context.localClassName.lowercase().contains("intro")) {
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "intro",
+                                "bottomN",
+                                banner1
+                            )
+                        } else {
+                            nativeWithoutMedia(
+                                context,
+                                native,
+                                context.window,
+                                "other",
+                                "bottomN",
+                                banner1
+                            )
+                        }
+                    }
+                } else if (parameter == 11) {
+                    if (context.localClassName.lowercase().contains("language")) {
+                        native.minimumHeight =
+                            context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._160sdp)
+                    }
+                    native.visibility = View.VISIBLE
+                    if (sessionLimit <= SessionCountLimit && session) {
+                    } else {
+                        nativeAdmob(context, native, context.window, 9)
+                    }
+                } else if (parameter == 12) {
+                    if (context.localClassName.lowercase().contains("language")) {
+                        native.minimumHeight =
+                            context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._160sdp)
+                    }
+                    native.visibility = View.VISIBLE
+                    if (sessionLimit <= SessionCountLimit && session) {
+                    } else {
+                        nativeAdmob(context, native, context.window, 6)
+                    }
+                } else if (parameter == 13) {
+                    if (context.localClassName.lowercase().contains("language")) {
+                        native.minimumHeight =
+                            context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._160sdp)
+                    }
+//                    layout.visibility = View.VISIBLE
+                    if (sessionLimit <= SessionCountLimit && session) {
+                    } else {
+//                        layout.visibility = View.VISIBLE
+                        nativeAdmob(context, native, context.window, 10)
+                    }
                 } else {
                     layout.visibility = View.GONE
                     native.visibility = View.GONE
                 }
 
-            }else{
+            } else {
                 layout.visibility = View.GONE
                 native.visibility = View.GONE
             }
-        }else{
+        } else {
             layout.visibility = View.GONE
             native.visibility = View.GONE
         }
@@ -231,17 +418,28 @@ object BannerAdManager {
                     adViewMedium.adUnitId = BANNER_ID!!
                     var extras = Bundle()
                     extras.putString("collapsible", position)
-                    var adRequest = AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter::class.java, extras).build();
+                    var adRequest =
+                        AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter::class.java, extras)
+                            .build();
                     adViewMedium.adListener = object : AdListener() {
                         override fun onAdLoaded() {
                             super.onAdLoaded()
-                            sendFirebaseAnalyticsKey(AppOpenAdManager.currentActivity!!, "admob_ad", "collapsible banner show")
+                            sendFirebaseAnalyticsKey(
+                                AppOpenAdManager.currentActivity!!,
+                                "admob_ad",
+                                "collapsible banner show"
+                            )
                             isSplashBannerLoad = true
                         }
+
                         override fun onAdClicked() {
                             super.onAdClicked()
                             clickCounter++
-                            if (clickCounter >= ClickCountLimit && !getSession("mySession", false)) {
+                            if (clickCounter >= ClickCountLimit && !getSession(
+                                    "mySession",
+                                    false
+                                )
+                            ) {
                                 Log.d("ajhdad", "save")
                                 saveSession("mySession", true)
                             } else {
@@ -255,6 +453,7 @@ object BannerAdManager {
             }
         }
     }
+
     private fun getAdaptiveAdSize(context: Context): AdSize {
         val display = context.getSystemService(WindowManager::class.java).defaultDisplay
         val outMetrics = DisplayMetrics()
@@ -268,6 +467,7 @@ object BannerAdManager {
         val adWidth = (adWidthPixels / density).toInt()
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, adWidth)
     }
+
     private fun getCollapsibleAdSize(context: Context): AdSize {
         val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val display: Display = windowManager.defaultDisplay
@@ -278,14 +478,20 @@ object BannerAdManager {
         val adWidth = (widthPixels / density).toInt()
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, adWidth)
     }
-    fun getHeightForNativeNoMedia(context: Context) : Int {
+
+    fun getHeightForNativeNoMedia(context: Context): Int {
         return context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._80sdp)
     }
 
-    fun getHeightForSmallNative(context: Context) : Int {
+    fun getHeightForSmallNative(context: Context): Int {
         return context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._30sdp)
     }
-    fun loadBannerApplovin(activity: AppCompatActivity, frameLayout: LinearLayout, layout: RelativeLayout?) {
+
+    fun loadBannerApplovin(
+        activity: AppCompatActivity,
+        frameLayout: LinearLayout,
+        layout: RelativeLayout?
+    ) {
         if (!InAppClass.isPurchase) {
             if (ShowApplovinAdsAfter_Limit_Reached) {
                 Log.d("adkjahd", activity.localClassName)
@@ -326,9 +532,9 @@ object BannerAdManager {
                 frameLayout.removeAllViews()
                 frameLayout.addView(adViewBannerAppLovin)
                 adViewBannerAppLovin!!.loadAd()
-            }else{
-                layout?.visibility=View.GONE
-                frameLayout?.visibility=View.GONE
+            } else {
+                layout?.visibility = View.GONE
+                frameLayout?.visibility = View.GONE
             }
         }
     }

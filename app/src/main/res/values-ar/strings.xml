@@ -151,4 +151,16 @@
     <string name="whatsapp_not">لم يتم تثبيت تطبيق WhatsApp Business.</string>
     <string name="whatsapp_not_install">WhatsApp غير مثبت.</string>
     <string name="search">ابحث عن الملصقات هنا</string>
+    <string name="search_home">ابحث هنا</string>
+    <string name="whats">واتس</string>
+    <string name="sticker_maker">صانع ملصقات</string>
+    <string name="pro">برو</string>
+    <string name="add_pack">إضافة حزمة</string>
+    <string name="edit_pack">تعديل حزمة</string>
+    <string name="save">حفظ</string>
+    <string name="get_premium">احصل على بريميوم</string>
+    <string name="terms_condition"><![CDATA[سيتم تجديد الاشتراك تلقائيًا مع بداية كل دورة دفع. الشروط والأحكام]]></string>
+    <string name="export_to">تصدير إلى</string>
+    <string name="change_langauge">تغيير اللغة</string>
+    <string name="adding">جارٍ الإضافة</string>
 </resources>

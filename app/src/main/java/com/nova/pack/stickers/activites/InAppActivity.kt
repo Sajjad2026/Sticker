@@ -109,7 +109,7 @@ class InAppActivity : AppCompatActivity() {
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 // Launch the URL
-                val url = "https://absoluinc.blogspot.com/2024/12/terms-of-services-for-subscriptions.html" // Replace with your URL
+                val url = AdsManager.Terms_And_Conditions // Replace with your URL
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 widget.context.startActivity(intent)
             }

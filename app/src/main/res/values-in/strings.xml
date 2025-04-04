@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business tidak diinstal.</string>
     <string name="whatsapp_not_install">Whatsapp tidak terpasang.</string>
     <string name="search">Cari Stiker Di Sini</string>
+    <string name="search_home">Cari di sini</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">Pembuat Stiker</string>
+    <string name="pro">Pro</string>
+    <string name="add_pack">Tambah Paket</string>
+    <string name="edit_pack">Edit Paket</string>
+    <string name="save">Simpan</string>
+    <string name="get_premium">Dapatkan Premium</string>
+    <string name="terms_condition"><![CDATA[Langganan akan diperpanjang otomatis di awal siklus. S&K berlaku]]></string>
+    <string name="export_to">Ekspor ke</string>
+    <string name="change_langauge">Ganti Bahasa</string>
+    <string name="adding">Menambahkan</string>
+
 </resources>

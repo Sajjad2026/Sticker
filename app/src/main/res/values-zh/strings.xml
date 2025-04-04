@@ -151,4 +151,17 @@
     <string name="whatsapp_not">未安装 Whatsapp Business。</string>
     <string name="whatsapp_not_install">Whatsapp 未安装。</string>
     <string name="search">在这里搜索贴纸</string>
+    <string name="search_home">搜索</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">贴纸制作</string>
+    <string name="pro">专业版</string>
+    <string name="add_pack">添加包</string>
+    <string name="edit_pack">编辑包</string>
+    <string name="save">保存</string>
+    <string name="get_premium">获取高级版</string>
+    <string name="terms_condition"><![CDATA[订阅将自动续订，并在每个周期开始时扣费。条款]]></string>
+    <string name="export_to">导出至</string>
+    <string name="change_langauge">更改语言</string>
+    <string name="adding">添加中</string>
+
 </resources>

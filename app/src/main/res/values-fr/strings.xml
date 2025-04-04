@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business n\'est pas installé.</string>
     <string name="whatsapp_not_install">Whatsapp n\'est pas installé.</string>
     <string name="search">Rechercher des autocollants ici</string>
+    <string name="search_home">Rechercher</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">Créateur d’autoc.</string>
+    <string name="pro">Pro</string>
+    <string name="add_pack">Ajouter pack</string>
+    <string name="edit_pack">Modifier pack</string>
+    <string name="save">Enregistrer</string>
+    <string name="get_premium">Obtenir Premium</string>
+    <string name="terms_condition"><![CDATA[Votre abonnement se renouvelle auto. et sera facturé au début du cycle. Conditions]]></string>
+    <string name="export_to">Exporter vers</string>
+    <string name="change_langauge">Changer langue</string>
+    <string name="adding">Ajout</string>
+
 </resources>

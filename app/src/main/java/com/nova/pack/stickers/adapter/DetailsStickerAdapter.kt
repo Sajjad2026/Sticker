@@ -23,7 +23,8 @@ import com.nova.pack.stickers.databinding.StickerItemLytBinding
 import com.nova.pack.stickers.model.StickerView
 import com.nova.pack.stickers.utils.SharedPreferenceHelper
 
-class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DetailsStickerAdapter(private var context: Context) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var stickerList = ArrayList<Any>() // Holds both StickerView and ads
 
@@ -33,7 +34,7 @@ class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (position == 3 &&NativeStickers_Detail_Activity_RecyclerView!=0) VIEW_TYPE_AD else VIEW_TYPE_STICKER
+        return if (position == 3 && NativeStickers_Detail_Activity_RecyclerView != 0) VIEW_TYPE_AD else VIEW_TYPE_STICKER
     }
 
 
@@ -47,6 +48,7 @@ class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter
                 )
                 AdViewHolder(binding)
             }
+
             else -> StickerViewHolder(
                 StickerItemLytBinding.inflate(
                     LayoutInflater.from(parent.context),
@@ -62,7 +64,11 @@ class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter
         stickerList.clear()
         stickerList.addAll(list)
         // Insert ad after the first row
-        if (NativeStickers_Detail_Activity_RecyclerView!=0 &&  !SharedPreferenceHelper.getSession("mySession", false) && !InAppClass.isPurchase){
+        if (NativeStickers_Detail_Activity_RecyclerView != 0 && !SharedPreferenceHelper.getSession(
+                "mySession",
+                false
+            ) && !InAppClass.isPurchase
+        ) {
             if (list.isNotEmpty() && list.size > 3) {
                 stickerList.add(3, "ad_placeholder")
             }
@@ -89,6 +95,7 @@ class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter
                     createAlertBox(position)
                 }
             }
+
             is AdViewHolder -> {
                 holder.bindNativeAd()
             }
@@ -108,34 +115,32 @@ class DetailsStickerAdapter(private var context: Context) : RecyclerView.Adapter
         val btnCancel = view.findViewById<ImageView>(R.id.cancel_btn)
         val imageView = view.findViewById<ImageView>(R.id.imageview_sticker)
         val sticker = stickerList[position] as StickerView
-        Glide.with(context).load(sticker.imageFile).placeholder(R.drawable.ic_loading).into(imageView)
+        Glide.with(context).load(sticker.imageFile).placeholder(R.drawable.ic_loading)
+            .into(imageView)
         btnCancel.setOnClickListener {
             dialog.dismiss()
         }
     }
 
-    class StickerViewHolder(val binding: StickerItemLytBinding) : RecyclerView.ViewHolder(binding.root)
+    class StickerViewHolder(val binding: StickerItemLytBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    inner class AdViewHolder(var binding:NativeAdBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class AdViewHolder(var binding: NativeAdBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindNativeAd() {
             if (!InAppClass.isPurchase) {
-                    binding.nativeContainer.visibility = View.VISIBLE
-                    if (NativeStickers_Detail_Activity_RecyclerView ==1){
-                        NativeAdManager.nativeAdmob(context as AppCompatActivity, binding.nativeContainer, (context as AppCompatActivity).window, 1)
-                    }else if (NativeStickers_Detail_Activity_RecyclerView ==2){
-                        NativeAdManager.nativeWithoutMedia(context as AppCompatActivity, binding.nativeContainer, (context as AppCompatActivity).window, "home_sticker","top", binding.linear)
-                    }else if (NativeStickers_Detail_Activity_RecyclerView ==3){
-                        NativeAdManager.nativeWithoutMedia(context as AppCompatActivity, binding.nativeContainer, (context as AppCompatActivity).window, "home_sticker","bottom",binding.linear)
-                    }else if (NativeStickers_Detail_Activity_RecyclerView ==4){
-                        binding.nativeContainer.minimumHeight=context.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._30sdp)
-                        NativeAdManager.nativeWithoutMedia(context as AppCompatActivity, binding.nativeContainer, (context as AppCompatActivity).window, "home_sticker","small",binding.linear)
-                    }else if (NativeStickers_Detail_Activity_RecyclerView ==5){
-                        NativeAdManager.nativeWithoutMedia(context as AppCompatActivity, binding.nativeContainer, (context as AppCompatActivity).window, "home_sticker","random",binding.linear)
-                    }else{
-                        Log.d("sfkljsf","adapter")
-                        binding.nativeContainer.visibility = View.GONE
-                    }
-            }else{
+                binding.nativeContainer.visibility = View.VISIBLE
+                if (NativeStickers_Detail_Activity_RecyclerView >= 1 && NativeStickers_Detail_Activity_RecyclerView <= 10) {
+                    NativeAdManager.nativeAdmob(
+                        context as AppCompatActivity,
+                        binding.nativeContainer,
+                        (context as AppCompatActivity).window,
+                        NativeStickers_Detail_Activity_RecyclerView
+                    )
+                } else {
+                    Log.d("sfkljsf", "adapter")
+                    binding.nativeContainer.visibility = View.GONE
+                }
+            } else {
                 binding.nativeContainer.visibility = View.GONE
             }
         }

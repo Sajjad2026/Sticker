@@ -151,4 +151,17 @@
     <string name="whatsapp_not">Whatsapp Business نصب نشده است.</string>
     <string name="whatsapp_not_install">Whatsapp نصب نشده است.</string>
     <string name="search">برچسب‌ها را در اینجا جستجو کنید</string>
+    <string name="search_home">جستجو کنید</string>
+    <string name="whats">واتساپ</string>
+    <string name="sticker_maker">سازنده برچسب</string>
+    <string name="pro">پرو</string>
+    <string name="add_pack">افزودن بسته</string>
+    <string name="edit_pack">ویرایش بسته</string>
+    <string name="save">ذخیره</string>
+    <string name="get_premium">دریافت ویژه</string>
+    <string name="terms_condition"><![CDATA[اشتراک به‌طور خودکار تمدید می‌شود و در شروع دوره هزینه دریافت می‌شود. شرایط]]></string>
+    <string name="export_to">صادرات به</string>
+    <string name="change_langauge">تغییر زبان</string>
+    <string name="adding">در حال افزودن</string>
+
 </resources>

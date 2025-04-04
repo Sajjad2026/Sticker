@@ -209,7 +209,7 @@ class ExitActivity : AppCompatActivity() {
         isEmailWriting=true
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:")
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("mailto:absolu.inc@gmail.com"))
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(AdsManager.Email_Address))
         intent.putExtra(Intent.EXTRA_SUBJECT, "FeedBack"+" ${getString(R.string.app_name)} "+BuildConfig.VERSION_CODE)
         startActivity(Intent.createChooser(intent, "Email via..."))
     }

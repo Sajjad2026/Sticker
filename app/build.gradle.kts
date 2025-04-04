@@ -24,8 +24,9 @@ android {
         applicationId = "com.nova.pack.stickers"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+//        versionCode = 1000 for testing
+        versionCode = 2 // Updated (1 Old) Apr 04,2025
+        versionName = "1.0.1"  // Updated (1.0.0 Old) Apr 04,2025
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         contentProviderAuthority = "$applicationId.provider.StickerContentProvider"
         manifestPlaceholders["contentProviderAuthority"] = contentProviderAuthority

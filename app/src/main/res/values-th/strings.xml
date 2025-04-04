@@ -151,4 +151,17 @@
     <string name="whatsapp_not">ไม่ได้ติดตั้ง Whatsapp Business</string>
     <string name="whatsapp_not_install">ไม่ได้ติดตั้ง Whatsapp</string>
     <string name="search">ค้นหาสติ๊กเกอร์ที่นี่</string>
+    <string name="search_home">ค้นหาที่นี่</string>
+    <string name="whats">WA</string>
+    <string name="sticker_maker">สร้างสติ๊กเกอร์</string>
+    <string name="pro">โปร</string>
+    <string name="add_pack">เพิ่มแพ็ค</string>
+    <string name="edit_pack">แก้ไขแพ็ค</string>
+    <string name="save">บันทึก</string>
+    <string name="get_premium">รับพรีเมียม</string>
+    <string name="terms_condition"><![CDATA[การสมัครจะต่ออายุอัตโนมัติและเรียกเก็บเงิน. ข้อกำหนด]]></string>
+    <string name="export_to">ส่งออกไป</string>
+    <string name="change_langauge">เปลี่ยนภาษา</string>
+    <string name="adding">กำลังเพิ่ม</string>
+
 </resources>

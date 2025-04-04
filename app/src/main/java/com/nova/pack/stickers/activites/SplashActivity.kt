@@ -13,7 +13,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
@@ -24,6 +23,7 @@ import android.view.View
 import android.view.animation.BounceInterpolator
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -62,12 +62,12 @@ import com.nova.pack.stickers.utils.SharedPreferenceHelper
 
 class SplashActivity : AppCompatActivity() {
     lateinit var binding: ActivitySplashBinding
-    var sharedPreferences:SharedPreferences?=null
-    var countDown:CountDownTimer?=null
-    var n:Long=0
+    var sharedPreferences: SharedPreferences? = null
+    var countDown: CountDownTimer? = null
+    var n: Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivitySplashBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -79,46 +79,47 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun mainInit() {
-        Log.d("Sdshkd","spalsh")
+        Log.d("Sdshkd", "spalsh")
         val bounceAnimator = ObjectAnimator.ofFloat(binding.imgSplash, "translationY", 0f, -10f, 0f)
         bounceAnimator.duration = 1000
         bounceAnimator.repeatCount = ObjectAnimator.INFINITE
         bounceAnimator.interpolator = BounceInterpolator()
         bounceAnimator.start()
         checkUpdates()
-        sharedPreferences=getSharedPreferences("myValue",0)
+        sharedPreferences = getSharedPreferences("myValue", 0)
 
-        binding.progressBar.visibility=View.VISIBLE
-        if (isNetworkAvailable()){
+        binding.progressBar.visibility = View.VISIBLE
+        if (isNetworkAvailable()) {
             InAppClass.setupBillingBlient(this)
-        //    initializeMobileAdsSdk(this)
-            if (PriorityAdmobOrApplovin){
+            //    initializeMobileAdsSdk(this)
+            if (PriorityAdmobOrApplovin) {
                 initializeMobileAdsSdk(this)
             }
-        }else{
-            if (sharedPreferences?.getString("value","0").equals("3")){
+        } else {
+            if (sharedPreferences?.getString("value", "0").equals("3")) {
                 Handler(Looper.getMainLooper()).postDelayed({
-                    binding.progressBar.visibility=View.GONE
-                    binding.btnGetStarted.visibility=View.VISIBLE
-                },4000)
-            }else if (sharedPreferences?.getString("value","0").equals("1")){
+                    binding.progressBar.visibility = View.GONE
+                    binding.btnGetStarted.visibility = View.VISIBLE
+                }, 4000)
+            } else if (sharedPreferences?.getString("value", "0").equals("1")) {
                 Handler(Looper.getMainLooper()).postDelayed({
-                    binding.progressBar.visibility=View.GONE
-                    binding.btnGetStarted.visibility=View.VISIBLE
-                },4000)
-            }else{
-                startActivity(Intent(this,NoInternetActivity::class.java))
+                    binding.progressBar.visibility = View.GONE
+                    binding.btnGetStarted.visibility = View.VISIBLE
+                }, 4000)
+            } else {
+                startActivity(Intent(this, NoInternetActivity::class.java))
             }
         }
         binding.btnGetStarted.setOnClickListener {
             launchActivity()
         }
         binding.btnGetStarted.setOnTouchListener { view, motionEvent ->
-            when(motionEvent.action){
+            when (motionEvent.action) {
                 MotionEvent.ACTION_DOWN -> {
                     view.scaleX = 0.9f
                     view.scaleY = 0.9f
                 }
+
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     view.scaleX = 1.0f
                     view.scaleY = 1.0f
@@ -131,6 +132,7 @@ class SplashActivity : AppCompatActivity() {
         onBackPressedDispatcher.addCallback {
         }
     }
+
     private fun loadConsentInfo() {
         Log.d("paiasd", "Starting consent information load")
 
@@ -154,10 +156,14 @@ class SplashActivity : AppCompatActivity() {
                         this@SplashActivity,
                         { loadAndShowError ->
                             if (loadAndShowError != null) {
-                                Log.e("Sdjddjhdjh", "Error loading consent form: ${loadAndShowError.message}")
+                                Log.e(
+                                    "Sdjddjhdjh",
+                                    "Error loading consent form: ${loadAndShowError.message}"
+                                )
                             } else {
                                 val consentStatus = consentInformation.consentStatus
-                                sharedPreferences?.edit()?.putString("value", consentStatus.toString())?.apply()
+                                sharedPreferences?.edit()
+                                    ?.putString("value", consentStatus.toString())?.apply()
 
                                 Log.d("Sdjddjhdjh", "Consent status: $consentStatus")
 
@@ -172,7 +178,10 @@ class SplashActivity : AppCompatActivity() {
                     )
                 },
                 { requestConsentError ->
-                    Log.e("TAsdsdG", "Failed to update consent info: ${requestConsentError.message}")
+                    Log.e(
+                        "TAsdsdG",
+                        "Failed to update consent info: ${requestConsentError.message}"
+                    )
                 }
             )
 
@@ -181,7 +190,8 @@ class SplashActivity : AppCompatActivity() {
             Log.e("paiasd", "Exception occurred", e)
         }
     }
-        private fun initializeMobileAdsSdk(context: Context) {
+
+    private fun initializeMobileAdsSdk(context: Context) {
         try {
             Log.d("Sdkjf", "initiale")
             ifConsentVisible = true
@@ -232,7 +242,7 @@ class SplashActivity : AppCompatActivity() {
                                 }, 4000)
                                 return@postDelayed
                             }
-                        },1000)
+                        }, 1000)
                         suspendedDialog()
                         if (AppOpenSplash == 1) {
                             binding.containAds.visibility = View.VISIBLE
@@ -243,29 +253,119 @@ class SplashActivity : AppCompatActivity() {
                             Log.d("ISsPLAHS", "progress")
                             binding.bannerLayout.visibility = View.VISIBLE
                             binding.bannerArea.visibility = View.VISIBLE
-                            BannerAdManager.loadBannerAd(this@SplashActivity, binding.bannerLayout, binding.bannerArea, binding.nativeContainer, 1)
+                            BannerAdManager.loadBannerAd(
+                                this@SplashActivity,
+                                binding.bannerLayout,
+                                binding.bannerArea,
+                                binding.nativeContainer,
+                                1
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 2) {
                             Log.d("ISsPLAHS", "progress")
                             binding.bannerLayout.visibility = View.VISIBLE
                             binding.bannerArea.visibility = View.VISIBLE
-                            BannerAdManager.loadCollapsibleBanner(this@SplashActivity, binding.bannerArea, "top")
+                            BannerAdManager.loadCollapsibleBanner(
+                                this@SplashActivity,
+                                binding.bannerArea,
+                                "top"
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 3) {
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "top", binding.bannerArea)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "top",
+                                binding.bannerArea
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 4) {
                             Log.d("sjfhdsf", "4")
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "bottom", binding.bannerArea)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "bottom",
+                                binding.bannerArea
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 5) {
                             binding.nativeContainer.visibility = View.VISIBLE
                             binding.nativeContainer2.visibility = View.GONE
-                            NativeAdManager.nativeAdmob(this@SplashActivity, binding.nativeContainer, window, 1)
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                1
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 6) {
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "small", binding.bannerArea)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "small",
+                                binding.bannerArea
+                            )
                         } else if (BannerAndNativeTopSplashActivity == 7) {
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "random", binding.bannerArea)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "random",
+                                binding.bannerArea
+                            )
+                        } else if (BannerAndNativeTopSplashActivity == 8) {
+                            Log.d("sjfhdsf", "4")
+                            binding.nativeContainer.visibility = View.VISIBLE
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "bottomN",
+                                binding.bannerArea
+                            )
+                        } else if (BannerAndNativeTopSplashActivity == 9) {
+                            binding.nativeContainer.visibility = View.VISIBLE
+                            binding.nativeContainer2.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                6
+                            )
+                        } else if (BannerAndNativeTopSplashActivity == 10) {
+                            binding.nativeContainer.visibility = View.VISIBLE
+                            binding.nativeContainer2.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                8
+                            )
+                        } else if (BannerAndNativeTopSplashActivity == 11) {
+                            binding.nativeContainer.visibility = View.VISIBLE
+                            binding.nativeContainer2.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                9
+                            )
+                        } else if (BannerAndNativeTopSplashActivity == 12) {
+                            binding.nativeContainer.visibility = View.VISIBLE
+                            binding.nativeContainer2.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                10
+                            )
                         } else {
                             Handler(Looper.getMainLooper()).postDelayed({
                                 binding.progressBar.visibility = View.GONE
@@ -277,30 +377,120 @@ class SplashActivity : AppCompatActivity() {
                             Log.d("ISsPLAHS", "progress")
                             binding.bannerLayout2.visibility = View.VISIBLE
                             binding.bannerArea2.visibility = View.VISIBLE
-                            BannerAdManager.loadBannerAd(this@SplashActivity, binding.bannerLayout2, binding.bannerArea2, binding.nativeContainer2, 1)
+                            BannerAdManager.loadBannerAd(
+                                this@SplashActivity,
+                                binding.bannerLayout2,
+                                binding.bannerArea2,
+                                binding.nativeContainer2,
+                                1
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 2) {
                             Log.d("ISsPLAHS", "progress")
                             binding.bannerLayout2.visibility = View.VISIBLE
                             binding.bannerArea2.visibility = View.VISIBLE
-                            BannerAdManager.loadCollapsibleBanner(this@SplashActivity, binding.bannerArea2, "bottom")
+                            BannerAdManager.loadCollapsibleBanner(
+                                this@SplashActivity,
+                                binding.bannerArea2,
+                                "bottom"
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 3) {
                             binding.nativeContainer2.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer2, window, "splash", "top", binding.bannerArea2)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                "splash",
+                                "top",
+                                binding.bannerArea2
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 4) {
                             Log.d("sjfhdsf", "bottom 4")
                             binding.nativeContainer2.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer2, window, "splash", "bottom", binding.bannerArea2)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                "splash",
+                                "bottom",
+                                binding.bannerArea2
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 5) {
                             binding.nativeContainer2.visibility = View.VISIBLE
                             binding.nativeContainer.visibility = View.GONE
-                            NativeAdManager.nativeAdmob(this@SplashActivity, binding.nativeContainer2, window, 1)
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                1
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 6) {
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "small", binding.bannerArea)
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "small",
+                                binding.bannerArea
+                            )
                         } else if (BannerAndNativeBottomSplashActivity == 7) {
                             binding.nativeContainer.visibility = View.VISIBLE
-                            NativeAdManager.nativeWithoutMedia(this@SplashActivity, binding.nativeContainer, window, "splash", "random", binding.bannerArea)
-                        }  else {
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer,
+                                window,
+                                "splash",
+                                "random",
+                                binding.bannerArea
+                            )
+                        } else if (BannerAndNativeBottomSplashActivity == 8) {
+                            Log.d("sjfhdsf", "bottom 4")
+                            binding.nativeContainer2.visibility = View.VISIBLE
+                            NativeAdManager.nativeWithoutMedia(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                "splash",
+                                "bottomN",
+                                binding.bannerArea2
+                            )
+                        } else if (BannerAndNativeBottomSplashActivity == 9) {
+                            binding.nativeContainer2.visibility = View.VISIBLE
+                            binding.nativeContainer.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                6
+                            )
+                        } else if (BannerAndNativeBottomSplashActivity == 10) {
+                            binding.nativeContainer2.visibility = View.VISIBLE
+                            binding.nativeContainer.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                8
+                            )
+                        } else if (BannerAndNativeBottomSplashActivity == 11) {
+                            binding.nativeContainer2.visibility = View.VISIBLE
+                            binding.nativeContainer.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                9
+                            )
+                        } else if (BannerAndNativeBottomSplashActivity == 12) {
+                            binding.nativeContainer2.visibility = View.VISIBLE
+                            binding.nativeContainer.visibility = View.GONE
+                            NativeAdManager.nativeAdmob(
+                                this@SplashActivity,
+                                binding.nativeContainer2,
+                                window,
+                                10
+                            )
+                        } else {
                             Handler(Looper.getMainLooper()).postDelayed({
                                 binding.progressBar.visibility = View.GONE
                                 binding.btnGetStarted.visibility = View.VISIBLE
@@ -323,22 +513,23 @@ class SplashActivity : AppCompatActivity() {
                 }
             }
             countDown?.start()
-        }catch (e:Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 
-    fun launchActivity(){
-        if (AppOpenSplash==1){
-            if (checkIfPlay){
-                AppOpenAdManager.showAdIfAvailable("splash",this)
-            }else{
+    fun launchActivity() {
+        if (AppOpenSplash == 1) {
+            if (checkIfPlay) {
+                AppOpenAdManager.showAdIfAvailable("splash", this)
+            } else {
                 startButtonTask(this)
             }
-        }else{
-           startButtonTask(this)
+        } else {
+            startButtonTask(this)
         }
     }
+
     private fun isNetworkAvailable(): Boolean {
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetworkInfo = connectivityManager?.activeNetworkInfo
@@ -376,6 +567,7 @@ class SplashActivity : AppCompatActivity() {
             Log.d("Exception", ex.toString())
         }
     }
+
     private fun checkAppSourceData() {
         val packageManager = packageManager
         try {
@@ -384,13 +576,13 @@ class SplashActivity : AppCompatActivity() {
                 if ("com.android.vending" == packageManager.getInstallerPackageName(applicationInfo.packageName)) {
                     true
                 } else {
-                    sendFirebaseAnalyticsKey(this,"third_party_app","this is third party app.")
+                    sendFirebaseAnalyticsKey(this, "third_party_app", "this is third party app.")
                     true
                 }
-           /* if (!checkIfPlay) {
-                 startActivity(Intent(this, ThirdPartyActivity::class.java))
-                finish()
-            }*/
+            /* if (!checkIfPlay) {
+                  startActivity(Intent(this, ThirdPartyActivity::class.java))
+                 finish()
+             }*/
         } catch (e: PackageManager.NameNotFoundException) {
             checkIfPlay = false
             e.printStackTrace()
@@ -403,13 +595,14 @@ class SplashActivity : AppCompatActivity() {
         params.putString(key, text)
         mFirebaseAnalytics!!.logEvent(key, params)
     }
-    fun suspendedDialog(){
-        if (IfAppSuspend){
-            var dialog=Dialog(this)
+
+    fun suspendedDialog() {
+        if (IfAppSuspend) {
+            var dialog = Dialog(this)
             dialog.setCanceledOnTouchOutside(false)
             dialog.setContentView(R.layout.suspend_dialog)
             window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            var button=dialog.findViewById<AppCompatButton>(R.id.btn_done)
+            var button = dialog.findViewById<AppCompatButton>(R.id.btn_done)
             button.setOnClickListener {
                 dialog.dismiss()
                 val appPackageName = packageName
